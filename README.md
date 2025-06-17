@@ -1,0 +1,1 @@
+# wakamiti-front-test
