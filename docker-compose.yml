@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  playwright-tests:
+    build: .
+    container_name: wakamiti-front-report
+    ports:
+      - "51100:51100"
+    volumes:
+      - .:/usr/src/app
+    tty: true
+    restart: unless-stopped

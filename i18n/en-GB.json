@@ -1,0 +1,82 @@
+{
+  "COMMON": {
+    "AVATAR": "Avatar",
+    "REJECT": "Reject All",
+    "CLOSE": "Close",
+    "GUARDAR": "Guardar",
+    "CONSUM": "Consum",
+    "EDIT": "Edit"
+  },
+  "LOGIN": {
+    "ENTRAR": "ENTRAR",
+    "BTN_ACCESO": "ACCESO",
+    "LOGIN_PASSWORD": "Contraseña",
+    "LOGIN_USER": "DNI/NIE o Email",
+    "PASS": "Pruebas123.",
+    "SALIR": "Salir",
+    "USER": "25521568D"
+  },
+  "PAGINA_INICIO": {
+    "ACCESO": "ACCESO",
+    "REGISTRATE": "Regístrate",
+    "RECETAS": "Recetas",
+    "ENTRE_NOSOTROS": "Entrenosotros",
+    "GUIAS": "Guías",
+    "SUPERMERCADOS": "Supermercados",
+    "SOBRE_NOSOTROS": "Sobre Nosotros",
+    "SOBRE_NOSOTROS_URL": "sobre-nosotros"
+  },
+  "ENTRE_NOSOTROS": {
+    "ALIMENTACION": "Alimentación",
+    "SALUD": "Salud",
+    "BELLEZA": "Belleza",
+    "EN_FAMILIA": "En familia",
+    "EN_FAMILIA_URL": "en-familia",
+    "HOGAR": "Hogar",
+    "TEAM_CONSUM": "Team Consum",
+    "ESTILO_VIDA": "Estilo de vida",
+    "ESTILO_VIDA_URL": "estilo-de-vida"
+  },
+  "SOBRE_NOSOTROS": {
+    "DECIR_HACIENDO": "Decir Haciendo",
+    "DECIR_HACIENDO_URL": "decir-haciendo",
+    "CONOCENOS": "Conócenos",
+    "PRENSA": "Prensa"
+  },
+  "RECETAS": {
+    "PLANIFICADOR": "Planificador",
+    "DIAS_NECESARIOS": "Cuántos días necesitas",
+    "PLANIFICAR_MENU": "Planificar mi menú",
+    "ALMUERZO": "Almuerzo",
+    "PASO_SIGUIENTE": "Paso siguiente",
+    "LIGERA": "Ligera",
+    "VER_PDF": "Ver PDF",
+    "GUARDAR_MENU": "Guardar menú"
+  },
+  "BUSCADOR": {
+    "BUSCAR": "Buscar...",
+    "ENVIAR": "Submit"
+  },
+  "CUENTA": {
+    "MI_CUENTA": "Mi cuenta",
+    "CP": "Código postal*",
+    "PUERTA": "Puerta",
+    "VALENCIANO": "Valenciano",
+    "DATOS_ACTUALIZADOS": "¡Listo!Datos actualizados."
+  },
+  "MUNDO_CONSUM": {
+    "MUNDO_CONSUM": "Mundo consum",
+    "MC_LOGUEADO": "mundo-consum-logueado",
+    "MI_AHORRO": "Mi ahorro",
+    "MI_AHORRO_URL": "mi-ahorro",
+    "FAVORITOS_URL": "favoritos",
+    "MI_CUENTA": "Mi cuenta",
+    "PRUEBA_OPINA": "Prueba y Opina",
+    "RECOMPENSAS": "Recompensas",
+    "CUPONES_AHORRO": "Mis Cupones Ahorro",
+    "CUPONES_AHORRO_URL": "cupones-ahorro",
+    "CHEQUE_CRECE": "Cheque Crece",
+    "CHEQUE_CRECE_URL": "cheque-crece",
+    "MIS_FAVORITOS": "Mis Favoritos"
+  }
+}

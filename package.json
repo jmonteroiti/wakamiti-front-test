@@ -1,0 +1,33 @@
+{
+  "name": "demoplaywright",
+  "version": "1.0.0",
+  "description": "- Instalar la extensión \"Playwright Test for VSCode\", aunque ejecutar el modo --ui también es una buena opción a la hora de buscar locators del DOM y programar tests.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test-ui": "playwright test --ui",
+    "report": "allure serve allure-results",
+    "local-publish-results": "node local-publish.js",
+    "test_publish": "npm run test && npm run -p report",
+    "report_only": "allure generate allure-results --clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.10.1",
+    "allure-playwright": "^3.2.1",
+    "http-server": "^14.1.1",
+    "monocart-reporter": "^2.9.12",
+    "playwright": "^1.52.0",
+    "playwright-i18next-fixture": "^1.0.0"
+  },
+  "dependencies": {
+    "@iti/iti-playwright-core": "^1.0.6",
+    "i18n": "^0.15.1",
+    "node-ssh": "^13.2.1",
+    "ssh2-sftp-client": "^12.0.0"
+  }
+}
