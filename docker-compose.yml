@@ -1,9 +1,9 @@
-version: "3.9"
+version: "3.3"
 
 services:
   playwright-tests:
     build: .
-    container_name: wakamiti-front-report
+    container_name: test_wakamiti_front
     ports:
       - "51100:51100"
     volumes:

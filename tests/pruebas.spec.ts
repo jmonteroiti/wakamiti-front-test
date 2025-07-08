@@ -3,14 +3,6 @@ import * as allure from "allure-js-commons";
 import { Common } from "./common";
 const owner = "jmontero";
 
-enum Severity {
-  "trivial" = "trivial",
-  "minor" = "minor",
-  "normal" = "normal",
-  "critical" = "critical",
-  "blocker" = "blocker",
-}
-
 test.describe(
   "Pruebas pagina front de wakamiti",
   { tag: "@wakamitiFront" },
@@ -25,7 +17,7 @@ test.describe(
       );
       await allure.owner(owner);
       await allure.tag("wakamiti-test");
-      await allure.severity(Severity.trivial);
+      await allure.severity(allure.Severity.TRIVIAL);
       await allure.label("pruebaLabel", "primera prueba");
 
       await expect(page).toHaveTitle(/Wakamiti/);
@@ -34,7 +26,7 @@ test.describe(
       page,
     }) => {
       await allure.owner(owner);
-      await allure.severity(Severity.minor);
+      await allure.severity(allure.Severity.MINOR);
       await allure.label("pruebaLabel", "segunda prueba ");
       let common = new Common(page);
 
@@ -55,7 +47,7 @@ test.describe(
       let common = new Common(page);
       await common.GetButtonAndClickByRole({ role: "application" });
       await allure.owner(owner);
-      await allure.severity(Severity.critical);
+      await allure.severity(allure.Severity.CRITICAL);
 
       await common
         .GetLocator({ text: ".q-dialog__backdrop" })
@@ -80,7 +72,7 @@ test.describe(
     test("Crear nuevo feature @allure.id:4", async ({ page }) => {
       let common = new Common(page);
       await allure.owner(owner);
-      await allure.severity(Severity.critical);
+      await allure.severity(allure.Severity.CRITICAL);
 
       await common.GetButtonAndClickByRole({ role: "main" });
 

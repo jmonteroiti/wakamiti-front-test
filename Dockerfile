@@ -3,7 +3,7 @@ FROM node:20-slim
 # Actualización y dependencias necesarias
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
-    curl unzip git nano cron openjdk-17-jre-headless fonts-liberation \
+    curl unzip git nano openjdk-17-jre-headless fonts-liberation \
     libnss3 libatk-bridge2.0-0 libx11-xcb1 libxcb-dri3-0 libxcomposite1 \
     libxdamage1 libxrandr2 libgbm1 libasound2 libatk1.0-0 libcups2 \
     libdrm2 libxshmfence1 xdg-utils && \
@@ -26,20 +26,8 @@ COPY . .
 RUN npm install && \
     npx playwright install --with-deps
 
-# Crear archivo de log de cron y dar permisos al script
-RUN touch /var/log/cron.log && \
-    chmod +x /usr/src/app/test_publish.js
-
-# Crear tarea de cron (cada 5 minutos)
-RUN echo "*/5 * * * * node /usr/src/app/test_publish.js >> /var/log/cron.log 2>&1" > /etc/cron.d/app-cron && \
-    chmod 0644 /etc/cron.d/app-cron && \
-    crontab /etc/cron.d/app-cron
-
-# Asegurar que el archivo de cron tenga la línea final
-RUN echo "" >> /etc/cron.d/app-cron
-
 # Exponer puerto del servidor Allure
 EXPOSE 51100
 
 # Comando de inicio: lanzar cron y el servidor
-CMD cron && sh -c "npx http-server ./allure-history -p 51100 --no-cache"
+CMD sh -c "npx http-server ./allure-history -d -p 51100 --no-cache"

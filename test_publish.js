@@ -6,13 +6,24 @@ const resultsDir = "allure-results";
 const historyDir = path.join(resultsDir, "history");
 const previousHistory = "allure-history/history";
 
-await main();
+const iteraciones = 10;
+let clean = false;
+
+for (let index = 1; index <= iteraciones; index++) {
+  if (index === 1) {
+    clean = true;
+  } else {
+    clean = false;
+  }
+
+  console.log(`Ejecutando ${index} de ${iteraciones} con clean = ${clean}`);
+  await main();
+}
 
 /**
  * Función prinicipal del script
- * @param {boolean} clean Si es true, se eliminan todas las carpetas de test anteriores y desaparece el historial. Por defecto es false
  */
-async function main(clean = false) {
+async function main() {
   try {
     if (clean) {
       await CleanProject();
@@ -98,7 +109,7 @@ function CambiarNombreReporteAllure() {
     const summary = JSON.parse(
       fs.readFileSync("allure-history/widgets/summary.json", "utf8")
     );
-    summary.reportName = "Test Web Wakamiti";
+    summary.reportName = "Test Wakamiti front";
     fs.writeFileSync(
       "allure-history/widgets/summary.json",
       JSON.stringify(summary, null, 2),
