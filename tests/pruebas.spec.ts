@@ -83,19 +83,5 @@ test.describe(
           console.log("Nuevo feature creado");
         });
     });
-    test("Crear nuevo feature @allure.id:5", async ({ page }) => {
-      let common = new Common(page);
-      await allure.owner(owner);
-      await allure.severity(allure.Severity.CRITICAL);
-
-      await common.GetButtonAndClickByRole({ role: "main" });
-
-      await common
-        .GetLocatorByRole({ role: "tab", name: "Sin nombre", exactOpt: false })
-        .isVisible()
-        .then(() => {
-          console.log("Nuevo feature creado");
-        });
-    });
   }
 );

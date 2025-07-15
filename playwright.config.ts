@@ -16,7 +16,7 @@ export default defineConfig({
   expect: {
     timeout: 30000,
   },
-  testDir: "/usr/src/app/src/test",
+  testDir: "./test",
   quiet: !!process.env.CI,
   /* Run tests in files in parallel */
   fullyParallel: true,
