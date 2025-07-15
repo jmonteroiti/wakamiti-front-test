@@ -1,12 +1,13 @@
 import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
+import { cwd } from "process";
 
 const resultsDir = "allure-results";
 const historyDir = path.join(resultsDir, "history");
 const previousHistory = "allure-history/history";
 
-const iteraciones = 10;
+const iteraciones = 1;
 let clean = false;
 
 for (let index = 1; index <= iteraciones; index++) {
@@ -92,7 +93,8 @@ async function GenerateReport() {
   // Cambia el nombre del reporte
   CambiarNombreReporteAllure();
 
-  console.log("✅ Reporte generado exitosamente en http://localhost:51100/");
+  console.log("✅ Reporte generado con éxito");
+  // console.log("✅ Reporte generado exitosamente en http://localhost:51100/");
 }
 
 /**

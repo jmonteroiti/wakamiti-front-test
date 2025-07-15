@@ -16,7 +16,7 @@ export default defineConfig({
   expect: {
     timeout: 30000,
   },
-  testDir: "./tests",
+  testDir: "/usr/src/app/src/test",
   quiet: !!process.env.CI,
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -52,8 +52,6 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    //  baseURL: 'https://sintesis-gestion-activos-sintesistest.opsdev.consum.es/',
     baseURL: "http://10.0.132.60:51000/",
     video: "off",
     actionTimeout: 30000,

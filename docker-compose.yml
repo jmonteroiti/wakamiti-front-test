@@ -3,10 +3,14 @@ version: "3.3"
 services:
   playwright-tests:
     build: .
-    container_name: test_wakamiti_front
+    container_name: test_wakamiti
     ports:
-      - "51100:51100"
+      # - "51100:51100"
     volumes:
       - .:/usr/src/app
+      - report_shared:/report
     tty: true
     restart: unless-stopped
+volumes:
+  report_shared:
+    external: true
