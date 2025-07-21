@@ -1,7 +1,6 @@
 import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
-import { cwd } from "process";
 
 const resultsDir = "allure-results";
 const historyDir = path.join(resultsDir, "history");
